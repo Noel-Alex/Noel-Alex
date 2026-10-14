@@ -1,41 +1,116 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="360" viewBox="0 0 1000 360" role="img" aria-labelledby="title desc">
-<title id="title">Noel Alex — block-world engineering profile</title>
-<desc id="desc">A restrained pixel-art dusk landscape with a small workshop, mine entrance, ore blocks and animated torchlight beside Noel Alex's engineering profile.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="400" viewBox="0 0 1000 400" role="img" aria-labelledby="title desc">
+<title id="title">Noel Alex — Minecraft-inspired engineering profile</title>
+<desc id="desc">A looping pixel-art dusk scene: Noel leaves a detailed workshop, walks to an ore block, mines it, collects the drop, then heads into a torch-lit mine before the scene resets.</desc>
 <style>
-text{font-family:monospace} .cloud{animation:drift 24s linear infinite} .cloud2{animation:drift2 31s linear infinite} .torch{animation:flicker 1.1s steps(2,end) infinite} .glint{animation:glint 3.2s steps(3,end) infinite} .cursor{animation:blink 1.1s steps(2,end) infinite}
-@keyframes drift{from{transform:translateX(0)}to{transform:translateX(115px)}} @keyframes drift2{from{transform:translateX(30px)}to{transform:translateX(-90px)}}
-@keyframes flicker{50%{opacity:.62;transform:translateY(1px)}} @keyframes glint{0%,70%,100%{opacity:.25}85%{opacity:1}} @keyframes blink{50%{opacity:0}}
-@media(prefers-reduced-motion:reduce){.cloud,.cloud2,.torch,.glint,.cursor{animation:none}}
+text{font-family:ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace}
+.cloud1{animation:cloud1 28s linear infinite}.cloud2{animation:cloud2 36s linear infinite}
+.smoke1{animation:smoke 4.6s ease-out infinite}.smoke2{animation:smoke 4.6s ease-out 2.3s infinite}
+.torch{animation:flicker .9s steps(2,end) infinite}.window{animation:window 3.2s steps(2,end) infinite}
+.star{animation:twinkle 3.7s steps(2,end) infinite}.cursor{animation:blink 1.1s steps(2,end) infinite}
+.player-motion{animation:playerPath 18s linear infinite}
+.player-bob{animation:bob .34s steps(2,end) infinite}
+.pickaxe{transform-box:fill-box;transform-origin:8px 24px;animation:swing .72s ease-in-out infinite}
+.toolvis{animation:toolvis 18s steps(1,end) infinite}
+.ore{animation:ore 18s steps(1,end) infinite}.crack1{animation:crack1 18s steps(1,end) infinite}.crack2{animation:crack2 18s steps(1,end) infinite}.crack3{animation:crack3 18s steps(1,end) infinite}
+.drop{animation:drop 18s steps(1,end) infinite}.railglint{animation:railglint 2.8s steps(3,end) infinite}
+@keyframes cloud1{from{transform:translateX(-45px)}to{transform:translateX(110px)}}
+@keyframes cloud2{from{transform:translateX(55px)}to{transform:translateX(-105px)}}
+@keyframes smoke{0%{opacity:0;transform:translate(0,0)}18%{opacity:.42}100%{opacity:0;transform:translate(18px,-45px)}}
+@keyframes flicker{50%{opacity:.68;transform:translateY(1px)}} @keyframes window{50%{opacity:.72}}
+@keyframes twinkle{50%{opacity:.25}} @keyframes blink{50%{opacity:0}}
+@keyframes bob{50%{transform:translateY(-2px)}}
+@keyframes playerPath{
+0%,7%{transform:translateX(0);opacity:1}
+19%,52%{transform:translateX(92px);opacity:1}
+64%{transform:translateX(150px);opacity:1}
+77%{transform:translateX(212px);opacity:1}
+82%{transform:translateX(232px);opacity:.15}
+83%,92%{transform:translateX(232px);opacity:0}
+93%{transform:translateX(0);opacity:0}
+100%{transform:translateX(0);opacity:1}}
+@keyframes toolvis{0%,18%{opacity:0}19%,52%{opacity:1}53%,100%{opacity:0}}
+@keyframes swing{0%,100%{transform:rotate(-38deg)}50%{transform:rotate(36deg)}}
+@keyframes ore{0%,42%{opacity:1}43%,92%{opacity:0}93%,100%{opacity:1}}
+@keyframes crack1{0%,26%{opacity:0}27%,31%{opacity:1}32%,100%{opacity:0}}
+@keyframes crack2{0%,31%{opacity:0}32%,36%{opacity:1}37%,100%{opacity:0}}
+@keyframes crack3{0%,36%{opacity:0}37%,42%{opacity:1}43%,100%{opacity:0}}
+@keyframes drop{0%,42%{opacity:0;transform:translateY(0)}43%{opacity:1;transform:translateY(-12px)}50%{opacity:1;transform:translateY(0)}53%,100%{opacity:0;transform:translateY(0)}}
+@keyframes railglint{0%,70%,100%{opacity:.25}84%{opacity:1}}
+@media(prefers-reduced-motion:reduce){.cloud1,.cloud2,.smoke1,.smoke2,.torch,.window,.star,.cursor,.player-motion,.player-bob,.pickaxe,.toolvis,.ore,.crack1,.crack2,.crack3,.drop,.railglint{animation:none}.toolvis,.crack1,.crack2,.crack3,.drop{opacity:0}}
 </style>
 <defs>
-  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#132637"/><stop offset="1" stop-color="#1b2d32"/></linearGradient>
-  <linearGradient id="cave" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#11181b"/><stop offset="1" stop-color="#071014"/></linearGradient>
+ <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#102536"/><stop offset=".6" stop-color="#1b3540"/><stop offset="1" stop-color="#27433f"/></linearGradient>
+ <linearGradient id="cave" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#11191c"/><stop offset="1" stop-color="#050a0d"/></linearGradient>
+ <radialGradient id="torchGlow"><stop offset="0" stop-color="#ffd67a" stop-opacity=".32"/><stop offset="1" stop-color="#ffd67a" stop-opacity="0"/></radialGradient>
 </defs>
-<rect width="1000" height="360" fill="url(#sky)"/>
-<rect x="12" y="12" width="976" height="336" fill="none" stroke="#93a980" stroke-width="2"/>
-<g fill="#d9e3c8" opacity=".72"><rect x="78" y="48" width="3" height="3"/><rect x="162" y="80" width="2" height="2"/><rect x="590" y="48" width="3" height="3"/><rect x="647" y="84" width="2" height="2"/><rect x="860" y="45" width="3" height="3"/><rect x="931" y="92" width="2" height="2"/></g>
-<rect x="855" y="35" width="38" height="38" rx="2" fill="#e9e0ae"/><rect x="855" y="35" width="10" height="10" fill="#cfc79c"/><rect x="883" y="53" width="10" height="10" fill="#cfc79c"/>
-<g class="cloud" fill="#314650" opacity=".7"><rect x="676" y="72" width="84" height="12"/><rect x="694" y="60" width="42" height="12"/></g>
-<g class="cloud2" fill="#2a3d46" opacity=".55"><rect x="818" y="118" width="72" height="10"/><rect x="834" y="108" width="35" height="10"/></g>
-<text x="42" y="53" fill="#9fb58d" font-size="14">NOEL-ALEX // SURVIVAL ENGINEER · AI SYSTEMS · COMPILERS · SIMULATION</text>
-<text x="42" y="118" fill="#f2efd8" font-size="55" font-weight="700">NOEL ALEX</text>
-<text x="42" y="161" fill="#e7c45e" font-size="20">&gt; mine assumptions. measure everything. ship the build.</text>
-<text x="42" y="204" fill="#c5cfba" font-size="16">I build systems that stay inspectable when they get complicated:</text>
-<text x="42" y="230" fill="#c5cfba" font-size="16">research infra · distributed systems · compilers · ML.</text>
-<g shape-rendering="crispEdges">
-  <rect x="650" y="258" width="326" height="30" fill="#6f9346"/><rect x="650" y="288" width="326" height="60" fill="#6d4f32"/>
-  <rect x="650" y="288" width="30" height="30" fill="#8a6842"/><rect x="710" y="318" width="30" height="30" fill="#8a6842"/><rect x="860" y="288" width="30" height="30" fill="#8a6842"/><rect x="920" y="318" width="30" height="30" fill="#8a6842"/>
-  <rect x="695" y="198" width="105" height="60" fill="#6b4a31"/><rect x="710" y="183" width="75" height="15" fill="#7c5838"/><rect x="695" y="198" width="105" height="10" fill="#8e6847"/>
-  <rect x="715" y="220" width="18" height="38" fill="#27363a"/><rect x="760" y="218" width="20" height="18" fill="#f0d987" opacity=".78"/>
-  <rect x="842" y="190" width="90" height="68" fill="#58636a"/><rect x="857" y="205" width="60" height="53" fill="url(#cave)"/>
-  <rect x="842" y="190" width="15" height="68" fill="#737f84"/><rect x="917" y="190" width="15" height="68" fill="#475158"/><rect x="857" y="190" width="60" height="15" fill="#687379"/>
-  <rect x="874" y="224" width="7" height="7" fill="#69d4cf"/><rect x="893" y="239" width="7" height="7" fill="#69d4cf"/><rect x="906" y="215" width="6" height="6" fill="#d85a4f"/>
-  <rect class="glint" x="873" y="223" width="9" height="9" fill="none" stroke="#d7fffb" stroke-width="1"/>
-  <rect x="827" y="217" width="4" height="28" fill="#8f6734"/><g class="torch"><rect x="824" y="208" width="10" height="10" fill="#e7c45e"/><rect x="827" y="205" width="5" height="6" fill="#ff9b45"/></g>
-  <rect x="665" y="225" width="18" height="18" fill="#c79066"/><rect x="665" y="243" width="18" height="15" fill="#457a83"/><rect x="668" y="258" width="6" height="12" fill="#24323a"/><rect x="677" y="258" width="6" height="12" fill="#24323a"/>
+<rect width="1000" height="400" fill="url(#sky)"/>
+<rect x="12" y="12" width="976" height="376" fill="none" stroke="#8ea67d" stroke-width="2"/>
+<g fill="#dce5ca" opacity=".75">
+ <rect class="star" x="76" y="48" width="3" height="3"/><rect class="star" x="163" y="79" width="2" height="2"/>
+ <rect class="star" x="555" y="50" width="3" height="3"/><rect class="star" x="631" y="88" width="2" height="2"/>
+ <rect class="star" x="824" y="58" width="3" height="3"/><rect class="star" x="949" y="90" width="2" height="2"/>
 </g>
-<path d="M42 279H618" stroke="#4f6253" stroke-width="1"/>
-<text x="42" y="309" fill="#9fb58d" font-size="13">WORLD  // VIT VELLORE · B.TECH CSE (DATA SCIENCE) · CLASS OF 2027</text>
-<text x="42" y="334" fill="#c5cfba" font-size="13">CURRENT BIOMES  // EVIDENCE-GROUNDED AI · RUST SYSTEMS · LANGUAGE MODELS</text>
-<rect class="cursor" x="604" y="322" width="8" height="13" fill="#e7c45e"/>
+<g shape-rendering="crispEdges">
+ <rect x="871" y="35" width="42" height="42" fill="#efe3a9"/><rect x="871" y="35" width="11" height="11" fill="#d2c791"/><rect x="902" y="55" width="11" height="11" fill="#d2c791"/>
+</g>
+<g class="cloud1" fill="#35505a" opacity=".66"><rect x="651" y="75" width="92" height="12"/><rect x="671" y="63" width="48" height="12"/><rect x="687" y="57" width="28" height="6"/></g>
+<g class="cloud2" fill="#2d4650" opacity=".52"><rect x="811" y="126" width="76" height="10"/><rect x="828" y="116" width="37" height="10"/></g>
+<text x="42" y="53" fill="#9fb58d" font-size="14">NOEL-ALEX // SURVIVAL ENGINEER · AI SYSTEMS · DISTRIBUTED INFRA · SEARCH</text>
+<text x="42" y="119" fill="#f4f1db" font-size="55" font-weight="700">NOEL ALEX</text>
+<text x="42" y="162" fill="#e8c75f" font-size="20">&gt; mine assumptions. measure everything. ship the build.</text>
+<text x="42" y="205" fill="#c9d3be" font-size="16">I build ambitious systems that stay inspectable when they get messy:</text>
+<text x="42" y="231" fill="#c9d3be" font-size="16">research tooling · distributed systems · retrieval · applied ML.</text>
+<path d="M42 279H593" stroke="#4d6452" stroke-width="1"/>
+<text x="42" y="310" fill="#9fb58d" font-size="13">WORLD // VIT VELLORE · B.TECH CSE (DATA SCIENCE) · CLASS OF 2027</text>
+<text x="42" y="336" fill="#c9d3be" font-size="13">CURRENT BIOMES // EVIDENCE-GROUNDED AI · RUST SYSTEMS · SEARCH / RETRIEVAL</text>
+<text x="42" y="365" fill="#758b76" font-size="11">profile save loaded</text><rect class="cursor" x="165" y="354" width="7" height="12" fill="#e8c75f"/>
+<g shape-rendering="crispEdges">
+ <rect x="610" y="285" width="366" height="30" fill="#6e9447"/>
+ <rect x="610" y="315" width="366" height="73" fill="#6a4e33"/>
+ <rect x="610" y="315" width="30" height="30" fill="#84613d"/><rect x="670" y="345" width="30" height="30" fill="#84613d"/>
+ <rect x="730" y="315" width="30" height="30" fill="#7a5939"/><rect x="790" y="345" width="30" height="30" fill="#84613d"/>
+ <rect x="850" y="315" width="30" height="30" fill="#7a5939"/><rect x="910" y="345" width="30" height="30" fill="#84613d"/>
+ <rect x="625" y="217" width="112" height="68" fill="#6e4a2f"/>
+ <rect x="615" y="205" width="132" height="12" fill="#493829"/>
+ <rect x="625" y="193" width="112" height="12" fill="#5c4230"/>
+ <rect x="640" y="181" width="82" height="12" fill="#704d31"/>
+ <rect x="649" y="162" width="13" height="31" fill="#57514b"/>
+ <rect x="651" y="158" width="9" height="5" fill="#7e7467"/>
+ <g class="smoke1" fill="#90a0a0"><rect x="650" y="148" width="10" height="8"/><rect x="657" y="139" width="8" height="8"/></g>
+ <g class="smoke2" fill="#90a0a0"><rect x="650" y="148" width="10" height="8"/><rect x="657" y="139" width="8" height="8"/></g>
+ <rect x="640" y="237" width="20" height="48" fill="#2c383a"/>
+ <rect x="644" y="242" width="4" height="4" fill="#a68451"/>
+ <g class="window"><rect x="685" y="230" width="28" height="22" fill="#f0d67d"/><rect x="698" y="230" width="3" height="22" fill="#725338"/><rect x="685" y="239" width="28" height="3" fill="#725338"/></g>
+ <rect x="714" y="264" width="22" height="21" fill="#9a6333"/><rect x="714" y="269" width="22" height="3" fill="#c28a45"/><rect x="723" y="270" width="5" height="6" fill="#d0b06a"/>
+ <rect x="665" y="263" width="18" height="22" fill="#8d6847"/><rect x="669" y="267" width="4" height="4" fill="#b38a60"/><rect x="677" y="275" width="4" height="4" fill="#62432d"/>
+ <rect x="864" y="205" width="96" height="80" fill="#59646a"/>
+ <rect x="878" y="219" width="68" height="66" fill="url(#cave)"/>
+ <rect x="864" y="205" width="14" height="80" fill="#778287"/><rect x="946" y="205" width="14" height="80" fill="#454f55"/>
+ <rect x="878" y="205" width="68" height="14" fill="#68747a"/>
+ <rect x="891" y="267" width="43" height="4" fill="#5e4838"/><rect x="895" y="271" width="3" height="14" fill="#8f7456"/><rect x="927" y="271" width="3" height="14" fill="#8f7456"/>
+ <rect class="railglint" x="893" y="266" width="39" height="1" fill="#e2e8e3"/>
+ <circle cx="858" cy="244" r="38" fill="url(#torchGlow)"/>
+ <rect x="855" y="244" width="4" height="31" fill="#8b6234"/><g class="torch"><rect x="852" y="235" width="10" height="10" fill="#e8c75f"/><rect x="855" y="231" width="5" height="7" fill="#ff9348"/></g>
+ <g class="ore">
+   <rect x="774" y="255" width="30" height="30" fill="#626c70"/>
+   <rect x="780" y="260" width="7" height="7" fill="#59c8c8"/><rect x="792" y="271" width="7" height="7" fill="#59c8c8"/><rect x="779" y="276" width="5" height="5" fill="#8be4dd"/>
+ </g>
+ <g class="crack1" stroke="#212a2d" stroke-width="2" fill="none"><path d="M789 256l-2 8 6 4"/></g>
+ <g class="crack2" stroke="#212a2d" stroke-width="2" fill="none"><path d="M789 256l-2 8 6 4-5 7m-1-11l-6 4"/></g>
+ <g class="crack3" stroke="#1c2426" stroke-width="2" fill="none"><path d="M789 256l-2 8 6 4-5 7 4 9m-5-20l-6 4 3 6m9-6l7-5"/></g>
+ <g class="drop"><path d="M786 263l6-7 7 7-7 9z" fill="#64d7d2"/><path d="M792 256v16" stroke="#b6fff8" stroke-width="2"/></g>
+ <g transform="translate(650 239)">
+  <g class="player-motion">
+   <g class="player-bob">
+    <rect x="0" y="0" width="18" height="18" fill="#c78f68"/><rect x="2" y="3" width="5" height="4" fill="#4a3429"/><rect x="11" y="3" width="5" height="4" fill="#4a3429"/>
+    <rect x="0" y="18" width="18" height="18" fill="#3f7b82"/><rect x="-5" y="19" width="5" height="15" fill="#c78f68"/><rect x="18" y="19" width="5" height="15" fill="#c78f68"/>
+    <rect x="1" y="36" width="7" height="10" fill="#29373d"/><rect x="11" y="36" width="7" height="10" fill="#29373d"/>
+    <g class="toolvis"><g class="pickaxe">
+      <rect x="18" y="19" width="3" height="28" fill="#8d673e"/>
+      <path d="M9 18h22v4H9zM8 21h6v4H8zm19 0h6v4h-6z" fill="#b6c0be"/>
+    </g></g>
+   </g>
+  </g>
+ </g>
+</g>
 </svg>
