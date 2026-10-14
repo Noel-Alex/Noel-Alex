@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="360" viewBox="0 0 1000 360" role="img" aria-labelledby="title desc">
+<title id="title">Noel Alex — block-world engineering profile</title>
+<desc id="desc">A restrained pixel-art dusk landscape with a small workshop, mine entrance, ore blocks and animated torchlight beside Noel Alex's engineering profile.</desc>
+<style>
+text{font-family:monospace} .cloud{animation:drift 24s linear infinite} .cloud2{animation:drift2 31s linear infinite} .torch{animation:flicker 1.1s steps(2,end) infinite} .glint{animation:glint 3.2s steps(3,end) infinite} .cursor{animation:blink 1.1s steps(2,end) infinite}
+@keyframes drift{from{transform:translateX(0)}to{transform:translateX(115px)}} @keyframes drift2{from{transform:translateX(30px)}to{transform:translateX(-90px)}}
+@keyframes flicker{50%{opacity:.62;transform:translateY(1px)}} @keyframes glint{0%,70%,100%{opacity:.25}85%{opacity:1}} @keyframes blink{50%{opacity:0}}
+@media(prefers-reduced-motion:reduce){.cloud,.cloud2,.torch,.glint,.cursor{animation:none}}
+</style>
+<defs>
+  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#132637"/><stop offset="1" stop-color="#1b2d32"/></linearGradient>
+  <linearGradient id="cave" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#11181b"/><stop offset="1" stop-color="#071014"/></linearGradient>
+</defs>
+<rect width="1000" height="360" fill="url(#sky)"/>
+<rect x="12" y="12" width="976" height="336" fill="none" stroke="#93a980" stroke-width="2"/>
+<g fill="#d9e3c8" opacity=".72"><rect x="78" y="48" width="3" height="3"/><rect x="162" y="80" width="2" height="2"/><rect x="590" y="48" width="3" height="3"/><rect x="647" y="84" width="2" height="2"/><rect x="860" y="45" width="3" height="3"/><rect x="931" y="92" width="2" height="2"/></g>
+<rect x="855" y="35" width="38" height="38" rx="2" fill="#e9e0ae"/><rect x="855" y="35" width="10" height="10" fill="#cfc79c"/><rect x="883" y="53" width="10" height="10" fill="#cfc79c"/>
+<g class="cloud" fill="#314650" opacity=".7"><rect x="676" y="72" width="84" height="12"/><rect x="694" y="60" width="42" height="12"/></g>
+<g class="cloud2" fill="#2a3d46" opacity=".55"><rect x="818" y="118" width="72" height="10"/><rect x="834" y="108" width="35" height="10"/></g>
+<text x="42" y="53" fill="#9fb58d" font-size="14">NOEL-ALEX // SURVIVAL ENGINEER · AI SYSTEMS · COMPILERS · SIMULATION</text>
+<text x="42" y="118" fill="#f2efd8" font-size="55" font-weight="700">NOEL ALEX</text>
+<text x="42" y="161" fill="#e7c45e" font-size="20">&gt; mine assumptions. measure everything. ship the build.</text>
+<text x="42" y="204" fill="#c5cfba" font-size="16">I build systems that stay inspectable when they get complicated:</text>
+<text x="42" y="230" fill="#c5cfba" font-size="16">research infra · distributed systems · compilers · ML.</text>
+<g shape-rendering="crispEdges">
+  <rect x="650" y="258" width="326" height="30" fill="#6f9346"/><rect x="650" y="288" width="326" height="60" fill="#6d4f32"/>
+  <rect x="650" y="288" width="30" height="30" fill="#8a6842"/><rect x="710" y="318" width="30" height="30" fill="#8a6842"/><rect x="860" y="288" width="30" height="30" fill="#8a6842"/><rect x="920" y="318" width="30" height="30" fill="#8a6842"/>
+  <rect x="695" y="198" width="105" height="60" fill="#6b4a31"/><rect x="710" y="183" width="75" height="15" fill="#7c5838"/><rect x="695" y="198" width="105" height="10" fill="#8e6847"/>
+  <rect x="715" y="220" width="18" height="38" fill="#27363a"/><rect x="760" y="218" width="20" height="18" fill="#f0d987" opacity=".78"/>
+  <rect x="842" y="190" width="90" height="68" fill="#58636a"/><rect x="857" y="205" width="60" height="53" fill="url(#cave)"/>
+  <rect x="842" y="190" width="15" height="68" fill="#737f84"/><rect x="917" y="190" width="15" height="68" fill="#475158"/><rect x="857" y="190" width="60" height="15" fill="#687379"/>
+  <rect x="874" y="224" width="7" height="7" fill="#69d4cf"/><rect x="893" y="239" width="7" height="7" fill="#69d4cf"/><rect x="906" y="215" width="6" height="6" fill="#d85a4f"/>
+  <rect class="glint" x="873" y="223" width="9" height="9" fill="none" stroke="#d7fffb" stroke-width="1"/>
+  <rect x="827" y="217" width="4" height="28" fill="#8f6734"/><g class="torch"><rect x="824" y="208" width="10" height="10" fill="#e7c45e"/><rect x="827" y="205" width="5" height="6" fill="#ff9b45"/></g>
+  <rect x="665" y="225" width="18" height="18" fill="#c79066"/><rect x="665" y="243" width="18" height="15" fill="#457a83"/><rect x="668" y="258" width="6" height="12" fill="#24323a"/><rect x="677" y="258" width="6" height="12" fill="#24323a"/>
+</g>
+<path d="M42 279H618" stroke="#4f6253" stroke-width="1"/>
+<text x="42" y="309" fill="#9fb58d" font-size="13">WORLD  // VIT VELLORE · B.TECH CSE (DATA SCIENCE) · CLASS OF 2027</text>
+<text x="42" y="334" fill="#c5cfba" font-size="13">CURRENT BIOMES  // EVIDENCE-GROUNDED AI · RUST SYSTEMS · LANGUAGE MODELS</text>
+<rect class="cursor" x="604" y="322" width="8" height="13" fill="#e7c45e"/>
+</svg>
