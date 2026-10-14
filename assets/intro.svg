@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="150" viewBox="0 0 1000 150" role="img" aria-labelledby="title desc">
+<title id="title">Player card</title><desc id="desc">A concise introduction to Noel Alex and his engineering focus.</desc>
+<style>text{font-family:monospace}</style>
+<rect width="1000" height="150" rx="4" fill="#111d24"/><rect x="3" y="3" width="994" height="144" rx="3" fill="none" stroke="#5e7059" stroke-width="2"/>
+<rect x="27" y="28" width="54" height="54" fill="#6f9346"/><rect x="27" y="55" width="54" height="27" fill="#6d4f32"/><rect x="39" y="40" width="8" height="8" fill="#8cad58"/><rect x="62" y="61" width="9" height="9" fill="#8a6842"/>
+<text x="106" y="34" fill="#e7c45e" font-size="13">PLAYER CARD / NOEL-ALEX</text>
+<text x="106" y="62" fill="#f2efd8" font-size="16" font-weight="700">Computer Science + Data Science @ VIT Vellore</text>
+<text x="106" y="88" fill="#c5cfba" font-size="14">I like projects where the interesting part begins after the demo:</text>
+<text x="106" y="110" fill="#c5cfba" font-size="14">benchmarks, provenance, failure recovery, observability, and the weird edge cases.</text>
+<text x="106" y="133" fill="#9fb58d" font-size="12">MAIN HAND: RUST / PYTHON   ·   OFF-HAND: TYPESCRIPT / C++ / JAVA / SQL</text>
+</svg>
