@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="490" height="190" viewBox="0 0 490 190" role="img" aria-label="SIVANA: Rust-native audio recognition from DSP to browser product.">
+<style>text{font-family:ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace}</style>
+<rect width="490" height="190" rx="4" fill="#111d24"/><rect x="3" y="3" width="484" height="184" rx="3" fill="none" stroke="#5e7059" stroke-width="2"/>
+<rect x="20" y="20" width="68" height="68" fill="#17262d" stroke="#63d8d2" stroke-width="2"/>
+<g shape-rendering="crispEdges"><path d="M38 35h31l10 13-25 29-25-29z" fill="#43bfc2"/><path d="M38 35h31l-7 13H45z" fill="#9ff4e9"/><path d="M29 48h16l9 29z" fill="#55d7d2"/><path d="M79 48H62l-8 29z" fill="#249ca5"/><path d="M45 48h17l-8 29z" fill="#6fe6dc"/><path d="M38 35l7 13-16 0z" fill="#69e3db"/></g>
+<text x="104" y="30" fill="#63d8d2" font-size="11">DIAMOND BUILD</text><text x="104" y="58" fill="#f2efd8" font-size="22" font-weight="700">SIVANA</text><text x="104" y="80" fill="#9fb58d" font-size="10">AUDIO / RECOGNITION</text>
+<text x="20" y="115" fill="#c5cfba" font-size="11">Rust-native audio recognition from DSP to browser product.</text><text x="20" y="136" fill="#c5cfba" font-size="11">Streaming fingerprints, mmap index, WASM, measured decisions.</text>
+<path d="M20 151H470" stroke="#415349"/><text x="20" y="174" fill="#aab69f" font-size="10">Rust · DSP · WASM · Axum · mmap index</text><text x="463" y="174" fill="#63d8d2" font-size="13" text-anchor="end">OPEN ▶</text></svg>
